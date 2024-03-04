@@ -5,7 +5,7 @@ if b is True and c is True:
     print("YES")
 else:
     print("NO")
-
+#-------------------
 b = input()
 if b == b[::-1]:
     print("YES")
