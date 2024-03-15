@@ -25,7 +25,6 @@ d = a // 10 % 10
 y = max(b, c, d)
 z = min(b, c, d)
 s = (b + c + d) - y - z
-print(y, z, s)
 if z != 0:
     print(str(z) + str(s), str(y) + str(s))
 else:

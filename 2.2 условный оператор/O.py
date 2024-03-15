@@ -10,5 +10,7 @@ maxNumber = max(n1, n2, n3, n4)
 minNumber = min(n1, n2, n3, n4)
 midleNumber = ((n1 + n2 + n3 + n4) - maxNumber - minNumber) % 10
 
-print(str(maxNumber) + str(midleNumber) + str(minNumber))
+# print(str(maxNumber) + str(midleNumber) + str(minNumber))
+
+#-------------
 print(maxNumber * 100 + midleNumber * 10 + minNumber)

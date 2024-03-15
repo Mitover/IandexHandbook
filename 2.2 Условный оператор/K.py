@@ -10,21 +10,20 @@ else:
     print("NO")
 
 
+#-----------------------
+num = int(input())
+first = num // 100
+second = num // 10 % 10
+third = num % 10
 
-# num = int(input())
+middle = first + second + third - max(first, second, third) - min(first, second, third)
 
-# first = num // 100
-# second = num // 10 % 10
-# third = num % 10
+if max(first, second, third) + min(first, second, third) == middle * 2:
+    print('YES')
+else:
+    print('NO')
 
-# middle = first + second + third - max(first, second, third) - min(first, second, third)
-
-# if max(first, second, third) + min(first, second, third) == middle * 2:
-#     print('YES')
-# else:
-#     print('NO')
-
-
+#------------------------
 # n = int(input())
 # a = n % 10
 # b = n // 10 % 10
