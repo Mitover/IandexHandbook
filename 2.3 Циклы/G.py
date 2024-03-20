@@ -1,8 +1,7 @@
 a = int(input())
 b = int(input())
-while a != 0 and b != 0:
-    if a > b:
-        a = a % b
-    else:
-        b = b % a
-print(a + b)
+n = max(a, b)
+while (n % min(a, b) != 0):
+    n += max(a, b)
+print(n)
+     
