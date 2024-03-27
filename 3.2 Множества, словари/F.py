@@ -12,7 +12,7 @@ sizeList2 = int(input())
 #         print(i)
 # else:
 #     print("Таких нет")
-
+#------------------
 set1 = set()
 set2 = set()
 for i in range(sizeList1):
