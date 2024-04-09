@@ -1,7 +1,7 @@
-number = int(input())
-n1 = int(str(number)[0]) 
-n2 = int(str(number)[1])
-n3 = int(str(number)[2]) 
+number = input()
+n1 = int(number[0]) 
+n2 = int(number[1])
+n3 = int(number[2])
 n23 = n2 + n3
 n12 = n1 + n2
 if n12 > n23:

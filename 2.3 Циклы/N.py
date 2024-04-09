@@ -1,14 +1,14 @@
-# number = int(input())
-# isTrue = True
-# for i in range(2, int(number **0.5) + 1):
-#     if number % i == 0:
-#         isTrue = False
-#         break
+number = int(input())
+isTrue = True
+for i in range(2, int(number **0.5) + 1):
+    if number % i == 0:
+        isTrue = False
+        break
 
-# if isTrue and number != 1:
-#     print("YES")
-# else:
-#     print("NO")
+if isTrue and number != 1:
+    print("YES")
+else:
+    print("NO")
 
 #----------
 

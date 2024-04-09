@@ -7,3 +7,4 @@ for number in numbers:
             dividers.append(divider)
     result[number] = dividers
 
+с = {number: [divider for divider in range(1, number + 1) if number % divider == 0] for number in numbers}

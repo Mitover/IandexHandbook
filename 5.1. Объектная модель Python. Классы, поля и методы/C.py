@@ -1,10 +1,10 @@
-# def number_length(number):
-#     if number < 0:
-#         number *= -1
-#     return len(str(number))
+class RedButton:
+    def __init__(self):
+        self.Schet = 0
 
-def number_length(number):
-    if number < 0:
-        return len(str(number)[1:])
-    return len(str(number))
-
+    def click(self):
+        print("Тревога!") 
+        self.Schet += 1
+        
+    def count(self):
+        return self.Schet
