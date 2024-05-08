@@ -6,6 +6,7 @@
 #     print(f'Старт {number}!!!')
 #     base_delay += 1
 
+#print("До старта ", delay, "секунд(ы)")
 
 count = int(input())
 base_delay = 3

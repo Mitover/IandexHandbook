@@ -2,8 +2,15 @@ number = input()
 n1 = int(number[0])
 n2 = int(number[1])
 n3 = int(number[2])
-sumNumbers = sum([n1, n2, n3])
-sumMaxMin = max(n1, n2, n3) + min(n1, n2, n3) 
+
+mx = ?
+mn = ?
+avr = ?
+
+sumNumbers = ?
+sumMaxMin = ?
+
+
 if sumMaxMin == (sumNumbers - sumMaxMin) * 2:
     print("YES")
 else:

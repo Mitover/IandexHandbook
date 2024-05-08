@@ -12,8 +12,8 @@ a = input()
 b = input()
 c = input()
 
-if a[1] == b[1] == c[1] :
+if a[1] == b[1] == c[1]:
     print(a[1])
-elif a[0] == b[0]  == c[0] :
+elif a[0] == b[0]  == c[0]:
     print(a[0])
 

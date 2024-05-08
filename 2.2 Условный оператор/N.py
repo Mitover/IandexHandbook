@@ -18,14 +18,42 @@
 # print(minAnswer, maxAnswer)
 
 
-a = int(input())
-b = a % 10
-c = a // 100
-d = a // 10 % 10
-y = max(b, c, d)
-z = min(b, c, d)
-s = (b + c + d) - y - z
-if z != 0:
-    print(str(z) + str(s), str(y) + str(s))
+# a = int(input())
+# b = a % 10
+# c = a // 100
+# d = a // 10 % 10
+# mx = max(b, c, d)
+# mn = min(b, c, d)
+# mid = (b + c + d) - mx - mn
+# if mn != 0:
+#     print(str(mn) + str(mid), str(mx) + str(mid))
+# else:
+#     print(str(mid) + str(mn), str(mx) + str(mid))
+
+
+
+
+
+
+
+
+
+
+number = input()
+n1 = int(number[0])
+n2 = int(number[1])
+n3 = int(number[2])
+
+maxNumber = max(n1, n2, n3)
+minNumber = min(n1, n2, n3)
+midleNumber = n1 + n2 + n3 - maxNumber - minNumber
+if minNumber == 0:
+    print(midleNumber * 10 + minNumber, maxNumber * 10 + midleNumber)
 else:
-    print(str(s) + str(z), str(y) + str(s))
+    print(minNumber * 10 + midleNumber, maxNumber * 10 + midleNumber)
+
+
+if minNumber == 0:
+    print(str(midleNumber) + str(minNumber), str(maxNumber) + str(midleNumber))
+else:
+    print(str(minNumber) +  str(midleNumber), str(maxNumber) + str(midleNumber))

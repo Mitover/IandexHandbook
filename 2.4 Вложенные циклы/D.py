@@ -8,3 +8,23 @@
 #         number //= 10
 # print(summa)
 
+
+#используя индексы
+# count = int(input())
+# number = 0
+# summa = 0
+# for _ in range(count):
+#     number = input()
+#     for i in range(len(number)):
+#         summa += int(number[i])
+# print(summa)
+
+#
+count = int(input())
+number = 0
+summa = 0
+for _ in range(count):
+    number = input()
+    for i in number:
+        summa += int(i)
+print(summa)
