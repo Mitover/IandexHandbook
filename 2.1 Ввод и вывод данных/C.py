@@ -4,5 +4,5 @@ print(a)
 print(a)
 
 # a = input()
-# a = a+ '\n' 
+# a = a + '\n' 
 # print(a * 3)
