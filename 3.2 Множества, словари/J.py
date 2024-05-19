@@ -13,8 +13,6 @@ for i in range(len(text)):
         textnew += Transliterate_Dict[text[i]]
     elif not text[i].isalpha():
         textnew += text[i]
-    elif text[i] == "ь" or text[i] == "ъ":
-        continue
     else:
         textnew += Transliterate_Dict[text[i].upper()].lower()
 print(textnew)

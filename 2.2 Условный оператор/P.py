@@ -2,10 +2,6 @@ p = int(input())
 v = int(input())
 t = int(input())
 
-first = max(p, v, t)
-third = min(p, v, t)
-second = p + v + t - first - third
-
 first_str = ""
 second_str = ""
 third_str = ""
@@ -37,6 +33,7 @@ elif t > p and t > v:
         first_str = "Толя"
         second_str = "Вася"
         third_str = "Петя" 
+
 
 print(f"{first_str: ^24}")
 print(f"{'  ' + second_str: <24}")

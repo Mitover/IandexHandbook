@@ -1,7 +1,7 @@
-cids = int(input())
+kids = int(input())
 name = ''
 total_summa = 0
-for game in range(cids):
+for game in range(kids):
     name = input()
     number = int(input())
     summa = 0
@@ -16,10 +16,10 @@ print(name)
 
 
 
-cids = int(input())
+kids = int(input())
 name = ''
 total_summa = 0
-for game in range(cids):
+for game in range(kids):
     name = input()
     number = int(input())
     summa = 0
