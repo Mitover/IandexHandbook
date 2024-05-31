@@ -1,5 +1,5 @@
 kids = int(input())
-name = ''
+total_name = ''
 total_summa = 0
 for game in range(kids):
     name = input()
@@ -10,14 +10,14 @@ for game in range(kids):
         number //= 10
     if total_summa <= summa:
         total_summa = summa
-        name = name
+        total_name = name
 print(name)
 
 
 
 
 kids = int(input())
-name = ''
+total_name = ''
 total_summa = 0
 for game in range(kids):
     name = input()
@@ -27,5 +27,5 @@ for game in range(kids):
         summa += int(i)
     if total_summa <= summa:
         total_summa = summa
-        name = name
+        total_name = name
 print(name)

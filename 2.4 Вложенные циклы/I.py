@@ -1,6 +1,6 @@
 # count_kids = int(input())
 # total_number = ""
-# max_number= 0
+# max_number = 0
 # for _ in range(count_kids):
 #     number = input()
 #     for i in range(len(number)):
