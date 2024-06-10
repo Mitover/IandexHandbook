@@ -13,3 +13,14 @@ for i in range(n):
     words = input()
     rabbits += words.split().count("зайка")
 print(rabbits)
+
+#----------------
+
+n = int(input())
+rabbits = 0
+for i in range(n):
+    words = input()
+    for word in words.split():
+        if word == "Зайка":
+            rabbits += 1
+print(rabbits)
