@@ -1,5 +1,5 @@
 import random
-a = open("D:/GitHub/PythonLearn/2.4 Вложенные циклы/B.py", encoding="UTF-8")
+a = open("D:/GitHub/PythonLearn/2.4 Вложенные циклы/C.py", encoding="UTF-8")
 list1 = a.read().split("###")[0]
 stringCodes = []
 for i in list1.split("\n"):
