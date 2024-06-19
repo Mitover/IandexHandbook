@@ -1,7 +1,7 @@
 a = int(input()) + 1
 for i in range(1, a):
     for j in range(1, a):
-        print(f'{j}*{i}={j * i}')
+        print(f'{j} * {i} = {j * i}')
 ###
 a = int(input()) + 1
 for i in range(1, a):
