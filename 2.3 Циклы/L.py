@@ -6,8 +6,7 @@ while i < len(a):
         maxNumber = int(a[i])
     i += 1 
 print(maxNumber)
-
-#--------------------------
+###
 a = input()
 b = 0
 while a > 0:
@@ -15,19 +14,17 @@ while a > 0:
         b = a % 10
     a //= 10
 print(b)
-
-#---------------------
+###
 a = input()
 b = 0
 for i in a:
     if int(i) > b:
         b = int(i)
 print(b)
-
-#-------------------
+###
 a = input()
 b = 0
 for i in range(len(a)):
-    if int(b[i]) > b:
-        b = int(b[i])
+    if int(a[i]) > b:
+        b = int(a[i])
 print(b)

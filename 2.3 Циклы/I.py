@@ -5,8 +5,7 @@ while i <= b:
     a *= i
     i += 1
 print(a)
-#----------------
-
+###
 n = int(input())
 f = 1
 for i in range(1, n + 1):

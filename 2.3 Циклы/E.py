@@ -7,3 +7,11 @@ while a != 0:
         b += a
     a = float(input())    
 print(b)
+
+
+
+
+
+
+
+
