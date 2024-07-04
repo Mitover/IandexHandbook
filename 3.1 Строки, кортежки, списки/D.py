@@ -7,9 +7,7 @@ while word != "":
         continue
     print(word)
     word = input()
-
-
-#---------
+###
 string = input()
 while string != "":
     if string[-3:] != '@@@':
@@ -17,8 +15,7 @@ while string != "":
             string = string[2:]
         print(string)
     string = input()
-
-#---------
+###
 string = input()
 while string != "":
     if not string.endswith('@@@'):
@@ -26,3 +23,16 @@ while string != "":
             string = string[2:]
         print(string)
     string = input()
+###
+word = input()
+listWords = []
+while word != "":
+    if word[:2] == "##":
+        listWords.append(word.replace("##", "")) 
+    if word[-3:] == "@@@":
+        word = input()
+        continue
+    listWords.append(word)
+    word = input()
+for i in listWords:
+    print(i)

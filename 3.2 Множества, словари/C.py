@@ -1,8 +1,7 @@
-spisok = []
-colMestnostei = int(input())
-for i in range(colMestnostei):
+terrainList = []
+count = int(input())
+for i in range(count):
     a = input().split()
-    spisok.extend(a)
-
-for i in set(spisok):
+    terrainList.extend(a)
+for i in set(terrainList):
     print(i)

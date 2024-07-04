@@ -2,7 +2,6 @@ size = int(input())
 words = ""
 terrain = input()
 count = 0
-
 for i in range(size):
     while terrain != 'ВСЁ':
         words += terrain
@@ -12,12 +11,8 @@ for i in range(size):
         count += 1
     words = ""  
     terrain = ""
-
 print(count)
-
-#списки
-
-
+###
 n = int(input())
 a = 0
 name = ""

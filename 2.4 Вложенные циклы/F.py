@@ -9,17 +9,13 @@ for _ in range(count - 1):
         else:
             gcd %= number
     gcd = gcd + number
-
 print(gcd)
-
 #II
 count = int(input())
 gcd = int(input())
 number = 0
-
 for _ in range(count - 1):
     number = int(input())
     while number != 0:
         gcd, number = number, gcd % number
-
 print(gcd)

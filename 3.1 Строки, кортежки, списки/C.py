@@ -3,16 +3,16 @@ n = int(input())
 for i in range(n):
     words = input()
     if len(words) > L:
-        words  = words[0:L - 3] + "..."
+        words = words[:L - 3] + "..."
     print(words)
-
-#------------
-# length = int(input())
-# count = int(input())
-
-# for _ in range(count):
-#     string = input()
-#     if len(string) <= length:
-#         print(string)
-#     else:
-#         print(f'{string[:length - 3]}...')
+###
+length = int(input())
+count = int(input())
+listWords = []
+for _ in range(count):
+    listWords.append(input())  
+for word in listWords:
+    if len(word) > length:
+        print(word[:length - 3] + "...")
+    else:
+        print(word)

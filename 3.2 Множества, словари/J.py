@@ -5,7 +5,6 @@ Transliterate_Dict = {
     'Ф': 'F', 'Х': 'KH', 'Ц': 'TC', 'Ч': 'CH', 'Ш': 'SH', 'Щ': 'SHCH',
     'Ы': 'Y', 'Э': 'E', 'Ю': 'IU', 'Я': 'IA', 'Ь': '', 'Ъ': ''
 }
-
 text = input()
 textnew = ""
 for i in range(len(text)):
