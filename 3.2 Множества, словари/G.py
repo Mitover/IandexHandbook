@@ -11,14 +11,14 @@ b = {'A': '.-', 'B': '-...', 'C': '-.-.',
 '3': '...--', '4': '....-', '5': '.....',
 '6': '-....', '7': '--...', '8': '---..',
 '9': '----.'}
-
-# a = input().upper()
-# for i in range(len(a)): 
-#     if a[i] != ' ':
-#         print(b[a[i]], end = " ")
-#     else:
-#         print()
-
+###
+a = input().upper()
+for i in range(len(a)): 
+    if a[i] != ' ':
+        print(b[a[i]], end = " ")
+    else:
+        print()
+###
 a = input().upper()
 for i in a: 
     if i != ' ':

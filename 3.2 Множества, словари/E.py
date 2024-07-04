@@ -1,6 +1,6 @@
 a = int(input())
 b = int(input())
-listNames = [input() for i in range(a+b)]
+listNames = [input() for i in range(a + b)]
 newList = []
 for i in listNames:
     if listNames.count(i) == 1:

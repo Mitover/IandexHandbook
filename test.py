@@ -1,5 +1,5 @@
 import random
-a = open("D:/GitHub/PythonLearn/3.1 Строки, кортежки, списки/F.py", encoding="UTF-8")
+a = open("D:/GitHub/PythonLearn/3.2 Множества, словари/H.py", encoding="UTF-8")
 list1 = a.read().split("###")[0]
 stringCodes = []
 for i in list1.split("\n"):
