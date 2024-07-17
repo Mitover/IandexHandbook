@@ -1,6 +1,6 @@
 import random
-a = open("D:/GitHub/PythonLearn/3.2 Множества, словари/H.py", encoding="UTF-8")
-list1 = a.read().split("###")[0]
+a = open("C:/Work/IandexHandbook/3.1 Строки, кортежки, списки/F.py", encoding="UTF-8")
+list1 = a.read().split("###")[1]
 stringCodes = []
 for i in list1.split("\n"):
     stringCodes.append(i.strip())

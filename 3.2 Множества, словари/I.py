@@ -1,13 +1,13 @@
-# objDict = {}
-# objStr = input()
-# while objStr != "":
-#     objList = objStr.split()
-#     for i in objList:
-#         objDict[i] = objDict.get(i, 0) + 1
-#     objStr = input()
-# for i in objDict:
-#     print(i, objDict[i])
-# -------------------
+objDict = {}
+objStr = input()
+while objStr != "":
+    objList = objStr.split()
+    for i in objList:
+        objDict[i] = objDict.get(i, 0) + 1
+    objStr = input()
+for i in objDict:
+    print(i, objDict[i])
+###
 objDict = {}
 objStr = input()
 while objStr != "":
@@ -20,8 +20,7 @@ while objStr != "":
     objStr = input()
 for i in objDict:
     print(i, objDict[i])
-# --------------------
-
+###
 objDict = {}
 objStr = input()
 while objStr != "":
