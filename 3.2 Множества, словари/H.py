@@ -3,6 +3,7 @@ dictNames = {}
 for i in range(count):
     namePorridge = input().split()
     dictNames[namePorridge[0]] = namePorridge[1:]
+print(dictNames)
 dictNames = dict(sorted(dictNames.items()))
 chooicePorridge = input()
 listNames = []
