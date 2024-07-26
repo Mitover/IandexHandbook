@@ -1,0 +1,1 @@
+{i for i in set(numbers)if i%2 != 0}
