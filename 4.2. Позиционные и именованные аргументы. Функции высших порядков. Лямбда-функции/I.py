@@ -1,0 +1,1 @@
+lambda c: (sum(int(x) for x in str(c)) % 2 == 0)

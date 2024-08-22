@@ -28,3 +28,18 @@ class Programmer:
 
     def info(self):
         return f"{self.name} {self.alltime}ч. {self.balance}тгр."
+    
+
+
+class Programmer:
+    def __init__(self, name, profile):
+        pass
+
+    def work(self, time):
+        pass
+
+    def rise(self):
+        pass
+
+    def info(self):
+        pass

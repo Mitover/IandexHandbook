@@ -21,27 +21,23 @@ class Rectangle:
     def resize(self, width, height):
         self.up_right_point[0] = self.left_down_point[0] + width
         self.left_down_point[1] = self.up_right_point[1] - height
+###
+class Point:
+    def __init__(self, x, y) -> None:
+        self.x = round(x, 2)
+        self.y = round(y, 2)
+
+    def round(self):
+        self.x = round(self.x, 2)
+        self.y = round(self.y, 2)
+        return self
 
 
-
-
-#--------------------
-# class Point:
-#     def __init__(self, x, y) -> None:
-#         self.x = round(x, 2)
-#         self.y = round(y, 2)
-
-#     def round(self):
-#         self.x = round(self.x, 2)
-#         self.y = round(self.y, 2)
-#         return self
-
-
-# class Rectangle:
-#     def __init__(self, dot1, dot2) -> None:
-#         self.point = Point(min(dot1[0], dot2[0]), max(dot1[1], dot2[1]))  # noqa
-#         self.width = round(max(dot1[0], dot2[0]) - self.point.x, 2)
-#         self.height = round(self.point.y - min(dot1[1], dot2[1]), 2)
+class Rectangle:
+    def __init__(self, dot1, dot2) -> None:
+        self.point = Point(min(dot1[0], dot2[0]), max(dot1[1], dot2[1]))  # noqa
+        self.width = round(max(dot1[0], dot2[0]) - self.point.x, 2)
+        self.height = round(self.point.y - min(dot1[1], dot2[1]), 2)
 
 #     def get_pos(self):
 #         return self.point.x, self.point.y
