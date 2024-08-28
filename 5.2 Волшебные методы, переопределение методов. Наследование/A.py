@@ -10,6 +10,8 @@ class Point:
     def length(self, point):
         result = ((point.x - self.x) ** 2 + (point.y - self.y) ** 2) ** 0.5
         return round(result, 2)
+    def __str__(self):
+        return "x: " + str(self.x) + " y: " + str(self.y)
 
 
 class PatchedPoint(Point):
@@ -20,8 +22,9 @@ class PatchedPoint(Point):
         elif len(args) == 1:
             self.x, self.y = args[0]
         elif len(args) == 2:
-            pass
-
+            self.x = args[0]
+            self.x = args[1]
+###
 # class PatchedPoint(Point):
 #     def __init__(self, *args) -> None:
 #         if len(args) == 0:
