@@ -6,13 +6,42 @@ RECIPES = {
     "Латте Макиато": {"coffee": 1, "milk": 2, "cream": 1},
     "Кон Панна": {"coffee": 1, "cream": 1},
 }
-
-
 in_stock = {"coffee": 1, "milk": 2, "cream": 3}
 in_stock = {"coffee": 4, "milk": 4, "cream": 0}
+###
+in_stock = {}
+def order(*drinks):
+    global in_stock
 
+    temp = in_stock
+    for drink in drinks:
+        for ingredient in RECIPES[drink]:
+            if RECIPES[drink][ingredient] > in_stock[ingredient]:
+                break
+        else:
+            for ingredient in RECIPES[drink]:
+                in_stock[ingredient] -= RECIPES[drink][ingredient]
+            return drink
 
+    if in_stock == temp:
+        return "К сожалению, не можем предложить Вам напиток"
+###
+in_stock = {}
+def order(*drinks):
+    global in_stock
 
+    temp = in_stock
+    for drink in drinks:
+        for ingredient in RECIPES[drink]:
+            if in_stock[ingredient] >= RECIPES[drink][ingredient]  :
+                break
+        else:
+            for ingredient in RECIPES[drink]:
+                in_stock[ingredient] -= RECIPES[drink][ingredient]
+            return drink
+
+    if in_stock == temp:
+        return "К сожалению, не можем предложить Вам напиток"
 # def order(*name_drink):
 #     global in_stock
 #     flag = True
@@ -51,27 +80,19 @@ in_stock = {"coffee": 4, "milk": 4, "cream": 0}
 
 #     if flag:
 #         return "К сожалению, не можем предложить Вам напиток"
-    
-
-
-
-
-
+### 
 def is_enough_ingredients(drink):
     global RECIPES, in_stock
     return all(RECIPES[drink][ingredient] <= in_stock[ingredient] for ingredient in RECIPES[drink])
-
 def order(*drinks):
     global RECIPES, in_stock
-
     for drink in drinks:
         if is_enough_ingredients(drink):
             for ingredient, amount in RECIPES[drink].items():
                 in_stock[ingredient] -= amount
             return drink
-
     return 'К сожалению, не можем предложить Вам напиток'
-
+###
 
 
 
@@ -79,3 +100,4 @@ def order(*drinks):
 # print(order("Капучино", "Макиато", "Эспрессо"))
 # print(order("Капучино", "Макиато", "Эспрессо"))
 # print(order("Капучино", "Макиато", "Эспрессо"))
+

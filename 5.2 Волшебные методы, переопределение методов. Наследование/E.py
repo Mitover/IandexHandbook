@@ -1,45 +1,52 @@
-class Fraction:
-    def __init__(self, *args):
+#v2.0
+class Fraction():
+    def __init__(self, *args) -> None:
         if isinstance(args[0], str):
-            self.__num = int(args[0].split("/")[0])
-            self.__den = int(args[0].split("/")[1])
+            self.__num, self.__den = [int(c) for c in args[0].split('/')]
         else:
             self.__num = args[0]
             self.__den = args[1]
-        self.reduction()
+        self.__reduction()
 
-    def find_gcd(self, a, b):
-        while (b != 0):
+    def __sign(self):
+        return -1 if self.__num < 0 else 1
+
+    def __neg__(self) -> 'Fraction':
+        return Fraction(-self.__num, self.__den)
+
+    def __gcd(self, a, b) -> int:
+        while b:
             a, b = b, a % b
-        return a
+        return abs(a)
 
-    def reduction(self):
-        gcd = self.find_gcd(self.__num, self.__den)
-        self.__num /= gcd
-        self.__den /= gcd
-        self.__num = int(self.__num)
-        self.__den = int(self.__den)
+    def __reduction(self) -> 'Fraction':
+        __gcd = self.__gcd(self.__num, self.__den)
+        self.__num //= __gcd
+        self.__den //= __gcd
+
+        if self.__den < 0:
+            self.__num = -self.__num
+            self.__den = abs(self.__den)
         return self
 
-    def __str__(self):
-        return f"{self.__num}/{self.__den}"
+    def __str__(self) -> str:
+        return f'{self.__num}/{self.__den}'
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Fraction('{self.__num}/{self.__den}')"
 
-    def numerator(self, *num2):
-        if len(num2):
-            self.__num = num2[0]
-            self.reduction()
+    def numerator(self, *args) -> int:
+        if len(args):
+            self.__num = args[0] * self.__sign()
+            self.__reduction()
         return abs(self.__num)
 
-    def denominator(self, *den2):
-        if len(den2):
-            self.__den = den2[0]
-            self.reduction()
+    def denominator(self, *args) -> int:
+        if len(args):
+            self.__den = args[0]
+        self.__reduction()
         return abs(self.__den)
-    def __neg__(self):
-        return Fraction(-self.__num, self.__den)
+
 
 
 # a = Fraction(1, 3)

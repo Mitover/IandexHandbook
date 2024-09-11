@@ -35,3 +35,15 @@ class Fraction():
             self.__den = args[0]
             self.__reduction()
         return self.__den
+    
+
+
+fraction = Fraction(3, 9)
+print(fraction, repr(fraction))
+fraction = Fraction('7/14')
+print(fraction, repr(fraction))
+
+fraction = Fraction(3, 9)
+print(fraction, repr(fraction))
+fraction = Fraction('7/14')
+print(fraction, repr(fraction))
