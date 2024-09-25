@@ -1,5 +1,5 @@
-sizeList1 = int(input())
-sizeList2 = int(input())
+# sizeList1 = int(input())
+# sizeList2 = int(input())
 # list1 = {input() for i in range(sizeList1)}
 # list2 = {input() for i in range(sizeList2)}
 # set1 = set(list1)
@@ -12,14 +12,17 @@ sizeList2 = int(input())
 #         print(i)
 # else:
 #     print("Таких нет")
-#------------------
+###
+sizeList1 = int(input())
+sizeList2 = int(input())
 set1 = set()
 set2 = set()
-for i in range(sizeList1):
-    set1.add(input())
-    
-for i in range(sizeList2):
-    set2.add(input())
+for _ in range(sizeList1 + sizeList2):
+    eater = input()
+    if eater in set1:
+        set2.add(eater)
+    else:
+        set1.add(eater)
 
 set3 = set1 ^ set2
 if len(set3) != 0:

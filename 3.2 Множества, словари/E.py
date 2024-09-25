@@ -25,4 +25,18 @@ if len(set1_set2) != 0:
     print(len(set1_set2))
 else:
     print('Таких нет')
-#словари
+###
+list1size = int(input())
+list2size = int(input())
+porridge_eaters = {}
+for _ in range(list1size + list2size):
+    eater = input()
+    porridge_eaters[eater] = porridge_eaters.get(eater, 0) + 1
+one_porridge_lovers = []
+for eater in porridge_eaters:
+    if porridge_eaters[eater] == 1:
+        one_porridge_lovers.append(eater)
+if len(one_porridge_lovers) != 0:
+    print(len(one_porridge_lovers))
+else:
+    print('Таких нет')
