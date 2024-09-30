@@ -31,6 +31,3 @@ for char in text:
     if char != ' ':
         print(dict.get(char, "\n"), end=" ")
 
-
-
-
