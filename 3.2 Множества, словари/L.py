@@ -10,3 +10,4 @@ for name in cousins:
         isNamesakesHave = True
 if not isNamesakesHave:
     print('Однофамильцев нет')
+###

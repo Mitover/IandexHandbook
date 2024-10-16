@@ -21,6 +21,18 @@ def result_accumulator(func):
             queue.clear()
             return result
     return wrapper
+###
+def result_accumulator(func):
+    queue = []
+    def wrapper(*args, method='accumulate', **kwargs):
+        if method == 'accumulate':
+            queue.append(func(*args, **kwargs))
+        elif method == 'drop':
+            queue.append((func(*args, **kwargs)))
+            result = queue[:]
+            queue.clear()
+            return result
+    return wrapper
 
 #example I
 @result_accumulator

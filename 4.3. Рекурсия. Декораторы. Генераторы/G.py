@@ -5,7 +5,6 @@ def same_type(func):
             return func(*args, **kwargs)
         else:
             print('Обнаружены различные типы данных')
-
     return funcion
 ###
 def same_type(func):
@@ -14,7 +13,6 @@ def same_type(func):
             return func(*args, **kwargs)
         else:
             print('Обнаружены различные типы данных')
-
     return funcion
 ###
 def same_type(func):
@@ -23,8 +21,18 @@ def same_type(func):
             return func(*args)
         print("Обнаружены различные типы данных")
         return False
-        
-
+    return funcion
+###
+def same_type(func):
+    def funcion(*args, **kwargs):
+        type_of_first = type(args[0])
+        listTrue = []
+        for item in args[1:]:
+            listTrue.append(type_of_first  == type(item))
+        if all(listTrue):
+            return func(*args)
+        else:
+            print("Обнаружены различные типы данных")
     return funcion
 
 

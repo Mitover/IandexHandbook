@@ -6,7 +6,6 @@ for i in range(n):
         v = "NO"
 print(v)
 ###
-#Вариант со списками
 num = int(input())
 all_good = True
 words = []
@@ -16,6 +15,17 @@ for word in words:
     if word[0] not in 'абв':
         all_good = False
 if all_good:
+    print('YES')
+else:
+    print('NO')
+###
+n = int(input())
+c = 0
+for i in range(n):
+    q = input().lower()
+    if q[0] in "абв":
+        c += 1
+if c == n:
     print('YES')
 else:
     print('NO')
