@@ -10,17 +10,13 @@ with open(file_out, "w") as file:
 ###
 file_in = input()
 file_out = input()
-
 with open(file_in, encoding="UTF-8") as file_in:
     text = file_in.read()
-
 while text.find("\t") + 1:
     text = text.replace("\t", "")
 while text.find("  ") + 1:
     text = text.replace("  ", " ")
-
 text = "\n".join(string.strip() for string in text.split("\n") if string)
-
 with open(file_out, "w", encoding="UTF-8") as file_out:
     file_out.write(text)
 ###

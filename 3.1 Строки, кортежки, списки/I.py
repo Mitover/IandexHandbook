@@ -1,23 +1,23 @@
-# text = "!"
-# while text:
-#     text = input()
-#     if text == "":
-#         break
-#     if text[0] == '#':
-#         continue
-#     if '#' in text:
-#         n = text.index('#')
-#         new_text = text[:n]
-#         print(new_text)
-#     else:
-#         print(text)
-# ###
-# while text := input():
-#     if text[0] == '#':
-#         continue
-#     if '#' in text:
-#         n = text.index('#')
-#         new_text = text[:n]
-#         print(new_text)
-#     else:
-#         print(text)
+text = "!"
+while text:
+    text = input()
+    if text == "":
+        break
+    if text[0] == '#':
+        continue
+    if '#' in text:
+        n = text.index('#')
+        new_text = text[:n]
+        print(new_text)
+    else:
+        print(text)
+###
+while text := input():
+    if text[0] == '#':
+        continue
+    if '#' in text:
+        n = text.index('#')
+        new_text = text[:n]
+        print(new_text)
+    else:
+        print(text)

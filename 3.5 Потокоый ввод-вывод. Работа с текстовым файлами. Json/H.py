@@ -15,3 +15,8 @@ with open(file_2, encoding='UTF-8') as file_in:
 unique = items_1 ^ items_2
 with open(file_out, 'w', encoding='UTF-8') as file_name:
     print('\n'.join(sorted(unique)), file=file_name)
+
+
+file_1 = input()
+file_2 = input()
+file_out = input()
