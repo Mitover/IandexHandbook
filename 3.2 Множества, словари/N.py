@@ -14,10 +14,8 @@ for _ in range(M):
     for _ in range(P):
         nado = input()
         spisok_pridyctes.add(nado)
-
     if productes & spisok_pridyctes == spisok_pridyctes:
         vivod.append(dish)
-
 vivod.sort()
 if len(vivod) == 0:
     print("Готовить нечего") 
