@@ -31,3 +31,14 @@ with open(input(), encoding='UTF-8') as f:
             spisok2 = [i for i in spisok if i != '']
 with open(input(), 'w', encoding='UTF-8') as c:
     c.write('\n'.join(spisok2))
+###
+with open(input(), encoding='utf-8', mode='r') as f:
+    b = f.read().split('\n')
+for i in range(len(b)):
+    if b[i] != '':
+        while '  ' in b[i] or '\t' in b[i]:
+            b[i] = b[i].replace('\t', '').replace('  ', ' ').strip(' ')
+print(b)
+n = [i for i in b if i != '']
+with open(input(), encoding='utf-8', mode='w') as d:
+    d.write('\n'.join(n))
