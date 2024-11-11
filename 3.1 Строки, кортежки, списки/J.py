@@ -1,16 +1,16 @@
-strAll = ""
-b = input().lower()
+allWord = ""
+word = input().lower()
 while b != "финиш":
-    strAll += b 
+    allWord += b 
     b = input().lower()
-col = 0
-syb = ""
-strAll = sorted(strAll.lower().replace(" ", "")) 
-for i in strAll:
-    if strAll.count(i) > col:
-        col = strAll.count(i)
-        syb = i   
-print(syb)
+maxCountChar = 0
+maxChar = ""
+strAll = sorted(allWord.lower().replace(" ", "")) 
+for char in allWord:
+    if allWord.count(char) > maxCountChar:
+        maxCountChar = allWord.count(char)
+        maxChar = char 
+print(maxChar)
 ###
 chars = []
 count = []
@@ -35,3 +35,4 @@ for index in range(len(chars)):
 charsMx.sort()
 if len(charsMx) != 0:
     print(charsMx[0])
+
