@@ -2,17 +2,17 @@ import json
 with open(input(), encoding='UTF-8') as f:
     spisok = [int(i) for i in f.read().split()]
     length = len(spisok)
-    neg = 0
+    posit = 0
     for _ in spisok:
         if _ > 0:
-            neg += 1
+            posit += 1
     minim = min(spisok)
     maxim = max(spisok)
     summ = sum(spisok)
     sa = summ / length
 data = {
     "count": length,
-    "positive_count": neg,
+    "positive_count": posit,
     "min": minim,
     "max": maxim,
     "sum": summ,

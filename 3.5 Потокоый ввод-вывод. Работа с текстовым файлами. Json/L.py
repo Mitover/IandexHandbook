@@ -24,22 +24,19 @@ for string in strings:
         else:
             equals.append(number)
 
-with open(evens_file, "a", encoding="UTF-8") as file:
-    file.write(" ".join(evens) + "\n")
-with open(odds_file, "a", encoding="UTF-8") as file:
-    file.write(" ".join(odds) + "\n")
-with open(equals_file, "a", encoding="UTF-8") as file:
-    file.write(" ".join(equals) + "\n")
+    with open(evens_file, "a", encoding="UTF-8") as file:
+        file.write(" ".join(evens) + "\n")
+    with open(odds_file, "a", encoding="UTF-8") as file:
+        file.write(" ".join(odds) + "\n")
+    with open(equals_file, "a", encoding="UTF-8") as file:
+        file.write(" ".join(equals) + "\n")
 ###
 input_file = "numbers.txt"
 evens_file = "even.txt"
 odds_file = "odd.txt"
 equals_file = "eq.txt"
-
 with open(input_file, encoding='UTF-8') as file_in:
     list_numbers = [string for string in file_in.read().split("\n") if string]
-
-
 for numbers in list_numbers:
     even_list = []
     odd_list = []

@@ -16,7 +16,12 @@ unique = items_1 ^ items_2
 with open(file_out, 'w', encoding='UTF-8') as file_name:
     print('\n'.join(sorted(unique)), file=file_name)
 
-
+###
 file_1 = input()
 file_2 = input()
 file_out = input()
+with open(input(), encoding='UTF-8') as file_in:
+    items_1 = set(file_in.read().split())
+with open(input(), encoding='UTF-8') as file_in2:
+    items_2 = set(file_in2.read().split())
+

@@ -9,16 +9,16 @@ print(max(numbers))
 print(total)
 print(f'{(total / length):.2f}')
 ###
-neg = 0
+posit = 0
 summ = 0
 with open('number.txt', encoding='UTF-8') as f:
     spisok = [int(i) for i in f.read().split()]
     len = len(spisok)
     for _ in spisok:
         if _ > 0:
-            neg += 1
+            posit += 1
     min = min(spisok)
     max = max(spisok)
     summ = sum(spisok)
     sa = summ / len
-print(len, neg, min, max, summ, round(sa, 2), sep= '\n')
+print(len, posit, min, max, summ, round(sa, 2), sep= '\n')
