@@ -43,5 +43,4 @@ while data:
         answer = answers.pop(0).strip('\n')
         if result == answer:
             score += multiplier
-
 print(score)
