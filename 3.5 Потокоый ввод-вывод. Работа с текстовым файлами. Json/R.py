@@ -1,6 +1,4 @@
 import os
-import os
-
 file_name = input()
 size = os.path.getsize(file_name)
 scale = ['Б', 'КБ', 'МБ', 'ГБ', 'ТБ']

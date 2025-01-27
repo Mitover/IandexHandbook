@@ -11,7 +11,6 @@ for file_name in file_names:
             found = True
 if not found:
     print('404. Not Found')
-
 #####
 from sys import stdin
 phrase = stdin.read().split("\n")
