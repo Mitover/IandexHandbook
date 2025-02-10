@@ -25,7 +25,7 @@ for i in range(n):
     q = input().lower()
     if q[0] in "абв":
         c += 1
-if c == n:
+if c > 0:
     print('YES')
 else:
     print('NO')
