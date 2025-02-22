@@ -30,4 +30,10 @@ text = input().upper()
 for char in text:
     if char != ' ':
         print(dict.get(char, "\n"), end=" ")
-
+###
+for i in text:
+    if i == " ":
+        print()
+        continue
+    i = dict[i.upper()]
+    print(i, end=" ")
