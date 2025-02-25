@@ -28,7 +28,7 @@ class Programmer:
 
     def info(self):
         return f"{self.name} {self.alltime}ч. {self.balance}тгр."
-###
+#####
 class Programmer:
 
     def __init__(self, name, position) -> None:
@@ -54,7 +54,7 @@ class Programmer:
             self.wage += 5
         else:
             self.wage += 1
-###
+#####
 class Programmer:
     __rank = {
         'Junior': 10,
