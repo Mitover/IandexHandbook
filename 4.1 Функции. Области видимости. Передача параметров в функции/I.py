@@ -27,7 +27,6 @@ def is_prime(number):
             return False
     return True
 #####
-#####
 def is_prime(number):
     if number < 2:
         return False
