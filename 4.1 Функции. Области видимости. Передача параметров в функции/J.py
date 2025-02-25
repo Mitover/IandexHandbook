@@ -25,3 +25,15 @@ def merge(sequence_1, sequence_2):
     sequence.extend(sequence_1[pos1:])
     sequence.extend(sequence_2[pos2:])
     return tuple(sequence)
+#####
+def merge(sequence_1, sequence_2):
+    lists = [i for i in sequence_1]
+    lists.extend([i for i in sequence_2])
+    lists.sort()
+    tuple_out = tuple(lists)
+    return tuple_out
+#####
+def merge(sequence_1, sequence_2):
+    sequence_1 = list(sequence_1)
+    sequence_2 = list(sequence_2)
+    return tuple(sorted(sequence_1 + sequence_2))
