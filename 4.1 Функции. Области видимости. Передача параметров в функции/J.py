@@ -36,4 +36,6 @@ def merge(sequence_1, sequence_2):
 def merge(sequence_1, sequence_2):
     sequence_1 = list(sequence_1)
     sequence_2 = list(sequence_2)
-    return tuple(sorted(sequence_1 + sequence_2))
+    sequence_1 += sequence_2
+    sequence_1.sort()
+    return tuple(sequence_1)

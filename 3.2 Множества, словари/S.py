@@ -9,21 +9,17 @@ for i in sorted(toys):
 ###
 toys = []
 unique = {}
-
 for _ in range(int(input())):
     name, str = input().split(': ')
     toys.extend(set(str.split(', ')))
-
 for toy in sorted(toys):
     unique[toy] = unique.get(toy, 0) + 1
-
 for toy in unique:
     if unique[toy] == 1:
         print(toy)
 ###
 toys = []
 unique = []
-
 for _ in range(int(input())):
     name, str = input().split(': ')
     toys.extend(set(str.split(', ')))  
