@@ -22,14 +22,12 @@ class Checkers():
                    'WXWXWXWX',
                    'XWXWXWXW',
                    'WXWXWXWX']        
-        # for i in self.board:
-        #     print(i, self.board[i])
         x = 0
         y = 0
         for row in '87654321':
             x = 0
             for col in 'ABCDEFGH':
-                self.board [col + row] = self.temp[x][y]
+                self.board [col + row] = Cell(self.temp[x][y])
                 x += 1
             y += 1
                 
@@ -48,7 +46,7 @@ class Checkers():
 
 
 
-
+######
 class Cell():
     def __init__(self, cell_item='X') -> None:
         self.state = cell_item
