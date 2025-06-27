@@ -22,6 +22,7 @@ if len(vivod) == 0:
 else:
     for i in vivod:
         print(i)
+        
 ###
 N = int(input())
 productes = set()

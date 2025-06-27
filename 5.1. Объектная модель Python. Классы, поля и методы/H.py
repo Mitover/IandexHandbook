@@ -30,14 +30,7 @@ class Checkers():
                 self.board [col + row] = Cell(self.temp[x][y])
                 x += 1
             y += 1
-                
-
-        self.temp2 = 'XBXBXBXB'+'BXBXBXBX'+'XBXBXBXB'+'XXXXXXXX'+'XXXXXXXX'+'WXWXWXWX'+'XWXWXWXW'+'WXWXWXWX'
-        i = 0
-        for row in '87654321':
-            for col in 'ABCDEFGH':
-                self.board [col + row] = Cell(self.temp2[i])
-                i += 1
+            
 
     def move(self, f, t):
         a = self.board[f].status()
@@ -64,10 +57,9 @@ class Cell():
         self.state = check
         return old_check
 
-
 class Checkers():
     def __init__(self) -> None:
-        self.cells = dict()
+        self.cells : dict[str, Cell] = dict()
         checker_board = 'XBXBXBXB' + 'BXBXBXBX' + 'XBXBXBXB' + 'XXXXXXXX' + \
             'XXXXXXXX' + 'WXWXWXWX' + 'XWXWXWXW' + 'WXWXWXWX'
 
@@ -83,3 +75,11 @@ class Checkers():
     def move(self, where_from, where_to):
         check = self.cells[where_from].remove_check()
         return self.cells[where_to].set_check(check)
+    
+checkers = Checkers()
+checkers.move('C3', 'D4')
+checkers.move('H6', 'G5')
+for row in '87654321':
+    for col in 'ABCDEFGH':
+        print(checkers.get_cell(col + row).status(), end='')
+    print()

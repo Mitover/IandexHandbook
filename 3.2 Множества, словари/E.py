@@ -9,6 +9,7 @@ if len(newList) == 0:
     print("Таких нет")
 else:
     print(len(newList))
+    
 ###
 list1size = int(input())
 list2size = int(input())
@@ -26,6 +27,7 @@ if len(set1_set2) != 0:
 else:
     print('Таких нет')
 ###
+
 list1size = int(input())
 list2size = int(input())
 porridge_eaters = {}

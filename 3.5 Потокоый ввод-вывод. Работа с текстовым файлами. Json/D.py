@@ -19,3 +19,6 @@ objects = lines[:-1]
 for line in objects:
     if subject in line.lower():
         print(line.strip('\n'))
+
+
+

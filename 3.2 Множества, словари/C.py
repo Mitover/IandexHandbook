@@ -5,6 +5,7 @@ for i in range(count):
     terrainList.extend(a)
 for i in set(terrainList):
     print(i)
+    
 ###
 N = int(input())
 a = ""

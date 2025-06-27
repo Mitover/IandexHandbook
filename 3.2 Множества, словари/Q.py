@@ -19,7 +19,7 @@
 
 
 
-# print(input().split())
+# # print(input().split())
 # b = """Иванов Петров
 # Иванов Сергеев
 # Васильев Петров
@@ -88,46 +88,97 @@
 
 
 
-listFriend = """Николай Фёдор
-Николай Женя
+# listFriend = """Николай Фёдор
+# Николай Женя
+# Фёдор Женя
+# Фёдор Илья
+# Илья Фёдор"""
+
+# listFriend = listFriend.split("\n")
+
+# for i in listFriend:
+#     fr1, fr2 = i.split()
+#     if fr1 in friends:
+#         friends[fr1].add(fr2)
+#     else:
+#         friends[fr1] = set()
+#         friends[fr1].add(fr2)
+      
+#     if fr2 in friends:
+#         friends[fr2].add(fr1)
+#     else:
+#         friends[fr2] = set()
+#         friends[fr2].add(fr1)
+        
+# friends = dict(sorted(friends.items()))
+# print(friends)
+
+# friends2 = {name: set() for name in friends}
+
+# for nameKey in friends:
+#     for friend in friends[nameKey]:
+#         for fr in friends:
+#             if friend in friends[fr]  and fr != nameKey:
+#                 friends2[nameKey].add(fr)
+
+# for key in friends2:
+#     friends2[key] = sorted(friends2[key])
+#     print(key, ": ", ", ".join(friends2[key]), sep="")
+
+# """Женя: Илья
+# Илья: Женя, Николай
+# Николай: Илья
+# Фёдор: """
+
+
+# friends = {}  # словарь прямых друзей
+
+# while pair := input():
+#     friend1, friend2 = pair.split()
+#     friends[friend1] = friends.get(friend1, set()) | set([friend2])
+#     friends[friend2] = friends.get(friend2, set()) | set([friend1])
+
+# friends_of_friends = {}  # словарь друзей друзей
+
+# for name in sorted(friends):
+#     for person in friends[name]:
+#         friends_of_friends[name] = friends_of_friends.get(
+#             name, set()) | friends[person]
+
+# for name in friends_of_friends:
+#     friends_of_friends[name].discard(name)  # удаляем самого себя
+#     friends_of_friends[name] -= friends[name]  # удаляем прямых друзей
+
+#     friends_of_friends[name] = sorted(friends_of_friends[name])
+
+#     print(f'{name}: {", ".join(friends_of_friends[name])}')
+
+
+listFriend = """Николай Женя
 Фёдор Женя
 Фёдор Илья
 Илья Фёдор"""
 
 listFriend = listFriend.split("\n")
-
 friends = {}
-friends2 = {}
+
 for i in listFriend:
-    fr1, fr2 = i.split()
-    if fr1 in friends:
-        friends[fr1].add(fr2)
-    else:
-        friends[fr1] = set()
-        friends[fr1].add(fr2)
-      
-    if fr2 in friends:
-        friends[fr2].add(fr1)
-    else:
-        friends[fr2] = set()
-        friends[fr2].add(fr1)
-        
-friends = dict(sorted(friends.items()))
+    friend1, friend2 = i.split()
+    print(friends.get(friend1, set()) | set([friend2]))
+    friends[friend1] = friends.get(friend1, set()) | set([friend2])
+    friends[friend2] = friends.get(friend2, set()) | set([friend1])
 print(friends)
+friends_of_friends = {}  # словарь друзей друзей
 
-friends2 = {name: set() for name in friends}
+for name in sorted(friends):
+    for person in friends[name]:
+        friends_of_friends[name] = friends_of_friends.get(
+            name, set()) | friends[person]
 
-for nameKey in friends:
-    for friend in friends[nameKey]:
-        for fr in friends:
-            if friend in friends[fr]  and fr != nameKey:
-                friends2[nameKey].add(fr)
+for name in friends_of_friends:
+    friends_of_friends[name].discard(name)  # удаляем самого себя
+    friends_of_friends[name] -= friends[name]  # удаляем прямых друзей
 
-for key in friends2:
-    friends2[key] = sorted(friends2[key])
-    print(key, ": ", ", ".join(friends2[key]), sep="")
+    friends_of_friends[name] = sorted(friends_of_friends[name])
 
-"""Женя: Илья
-Илья: Женя, Николай
-Николай: Илья
-Фёдор: """
+    print(f'{name}: {", ".join(friends_of_friends[name])}')
