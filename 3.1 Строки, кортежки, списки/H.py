@@ -10,6 +10,7 @@ for _ in range(a):
         print(j + 1)
     else:
         print("Заек нет =(")
+
 ###
 count = int(input())
 bunnies = 0
@@ -19,6 +20,7 @@ for _ in range(count):
         print(position)
     else:
         print("Заек нет =(")
+
 ###
 count = int(input())
 bunnies = 0
@@ -28,6 +30,7 @@ for _ in range(count):
         print(string.index('зайка') + 1)
     else:
         print("Заек нет =(")
+        
 ###
 a = int(input())
 for _ in range(a):
