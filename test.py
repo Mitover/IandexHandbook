@@ -2,15 +2,24 @@ import random
 import os
 
 print(os.getcwd())
-a = open(os.getcwd() +"/3.1 Строки, кортежки, списки/J.py", encoding="UTF-8")
-list1 = a.read().split("###")[0]
+a = open("D:/GitHub/IandexHandbook/2.3 Циклы/N.py", encoding="UTF-8")
+list1 = a.read().split("###")
 stringCodes = []
-for i in list1.split("\n"):
-    stringCodes.append(i.strip())
+for i in list1:
+    stringCodes.append(i.split("\n"))
 
-random.shuffle(stringCodes)
+
+
+
 for i in stringCodes:
-    if i!="":
-        print(i)
+    random.shuffle(i)
+    print()
+    print("###")
+    for j in i:
+        if j != "":
+            print(j.strip())
+    
+   
+
 
 

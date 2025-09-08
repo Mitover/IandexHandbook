@@ -1,8 +1,8 @@
 allWord = ""
 word = input().lower()
-while b != "финиш":
-    allWord += b 
-    b = input().lower()
+while word != "финиш":
+    allWord += word 
+    word = input().lower()
 maxCountChar = 0
 maxChar = ""
 strAll = sorted(allWord.lower().replace(" ", "")) 
