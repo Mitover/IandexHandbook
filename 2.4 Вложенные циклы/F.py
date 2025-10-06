@@ -1,4 +1,4 @@
-#I
+###
 count = int(input())
 gcd = int(input())
 for _ in range(count - 1):
@@ -10,7 +10,7 @@ for _ in range(count - 1):
             gcd %= number
     gcd = gcd + number
 print(gcd)
-#II
+###
 count = int(input())
 gcd = int(input())
 number = 0

@@ -6,7 +6,6 @@ for i in range(size):
     while terrain != 'ВСЁ':
         words += terrain
         terrain = input()
-
     if "зайка" in words:
         count += 1
     words = ""  

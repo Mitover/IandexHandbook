@@ -1,7 +1,6 @@
 number = int(input())
 result = 0
 power = 1
-
 while number > 0:
     if number % 2 != 0:
         result += (number % 10) * power
@@ -9,8 +8,7 @@ while number > 0:
     number //= 10
 
 print(result)
-
-#######
+###
 number = input()
 result = ""
 
@@ -19,9 +17,7 @@ for i in range(len(number)):
         result += number[i] 
 
 print(result)
-
-
-########
+###
 number = input()
 result = ""
 

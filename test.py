@@ -2,7 +2,7 @@ import random
 import os
 
 print(os.getcwd())
-a = open("D:/GitHub/IandexHandbook/2.3 Циклы/N.py", encoding="UTF-8")
+a = open("D:/GitHub/IandexHandbook/2.4 Вложенные циклы/K.py", encoding="UTF-8")
 list1 = a.read().split("###")
 stringCodes = []
 for i in list1:

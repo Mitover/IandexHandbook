@@ -1,3 +1,4 @@
+###
 count_kids = int(input())
 total_number = ""
 max_number = 0

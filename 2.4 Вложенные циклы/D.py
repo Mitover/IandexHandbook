@@ -9,7 +9,6 @@ for _ in range(count):
 print(summa)
 ###
 count = int(input())
-number = 0
 summa = 0
 for _ in range(count):
     number = input()
